@@ -76,7 +76,7 @@ def main (  ): #{
     MIN_EPOCHS = 200
 
     dataSet = createDataSet("pics/")
-    net = buildNetwork(1600, 20, 3, hiddenclass=SoftmaxLayer)
+    net = buildNetwork(1600, 4, 3, hiddenclass=SoftmaxLayer)
     net.sortModules()
 
     trainer = BackpropTrainer(net, dataSet)
