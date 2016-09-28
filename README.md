@@ -11,7 +11,7 @@
     Обучающая презентация:http://www.myshared.ru/slide/225129/
 
     Пример создания квадрата:
-square = Image.new("RGBA", (40, 40), (255, 255, 255, 255))
+    square = Image.new("RGBA", (40, 40), (255, 255, 255, 255))
     draw = ImageDraw.Draw(square)
     draw.rectangle((10, 10, 30, 30), fill=(255, 255, 255, 255), outline=(0, 0, 0, 255))
     square.save("generatedPics/square.png", "PNG")
@@ -47,9 +47,14 @@ square = Image.new("RGBA", (40, 40), (255, 255, 255, 255))
      Процесс тренировки происходит пока (backpropError > 0.001) или (epochs < MIN_EPOCHS)
      , где MAX_EPOCHS = 5000
            MIN_EPOCHS = 200
-*Распознание элементов на картинке
+*Распознавание элементов на картинке
 
+Создана функция convertPicInWB(dir,factor = 0), которая конвертирует изображение в чёрно-белое
+Создана функция makeVectorFromPic(dir) которая преобразует полученное черно-белое изображение в вектор.
 
+Распознавание фигур выглядит следующим образом:
+            arr = makeVectorFromPic("picsForTest/test.png")
+            print net.activate(arr)
      
 
 
