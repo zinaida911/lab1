@@ -5,50 +5,50 @@ from PIL import ImageDraw, ImageFont
 import os
 
 def generatePic():
-    square = Image.new("RGB", (40, 40), (255, 255, 255))
+    square = Image.new("RGBA", (40, 40), (255, 255, 255, 255))
     draw = ImageDraw.Draw(square)
-    draw.rectangle((10, 10, 30, 30), fill=(255, 255, 255), outline=(0, 0, 0))  # square
+    draw.rectangle((10, 10, 30, 30), fill=(255, 255, 255, 255), outline=(0, 0, 0, 255))
     square.save("generatedPics/square.png", "PNG")
 
-    circle = Image.new("RGB", (40, 40), (255, 255, 255))
+    circle = Image.new("RGBA", (40, 40), (255, 255, 255, 255))
     draw = ImageDraw.Draw(circle)
-    draw.ellipse((5, 5, 35, 35), outline="black", fill="white")  # circle
+    draw.ellipse((5, 5, 35, 35), outline=(0, 0, 0, 255), fill=(255, 255, 255, 255))
     circle.save("generatedPics/circle.png", "PNG")
 
-    sqrTriangle1 = Image.new("RGB", (40, 40), (255, 255, 255))
+    sqrTriangle1 = Image.new("RGBA", (40, 40), (255, 255, 255, 255))
     draw = ImageDraw.Draw(sqrTriangle1)
-    draw.polygon((5, 5, 35, 35, 5, 35), outline=(0, 0, 0), fill=(255, 255, 255))  # triangle
+    draw.polygon((5, 5, 35, 35, 5, 35), outline=(0, 0, 0, 255), fill=(255, 255, 255, 255))
     sqrTriangle1.save("generatedPics/sqrTriangle.png", "PNG")
 
-    triangle = Image.new("RGB", (40, 40), (255, 255, 255))
+    triangle = Image.new("RGBA", (40, 40), (255, 255, 255, 255))
     draw = ImageDraw.Draw(triangle)
-    draw.polygon((30, 30, 10, 30, 20, 10), outline=(0, 0, 0), fill=(255, 255, 255))  # triangle
+    draw.polygon((30, 30, 10, 30, 20, 10), outline=(0, 0, 0, 255), fill=(255, 255, 255, 255))
     triangle.save("generatedPics/triangle.png", "PNG")
 
-    squareF = Image.new("RGB", (40, 40), (255, 255, 255))
+    squareF = Image.new("RGBA", (40, 40), (255, 255, 255, 255))
     draw = ImageDraw.Draw(squareF)
-    draw.rectangle((10, 10, 30, 30), fill="black", outline=(0, 0, 0))  # square
+    draw.rectangle((10, 10, 30, 30), fill=(0, 0, 0, 255), outline=(0, 0, 0, 255))
     squareF.save("generatedPics/squareFilled.png", "PNG")
 
-    circleF = Image.new("RGB", (40, 40), (255, 255, 255))
+    circleF = Image.new("RGBA", (40, 40), (255, 255, 255, 255))
     draw = ImageDraw.Draw(circleF)
-    draw.ellipse((5, 5, 35, 35), outline="black", fill="black")  # circle
+    draw.ellipse((5, 5, 35, 35), outline=(0, 0, 0, 255), fill=(0, 0, 0, 255))
     circleF.save("generatedPics/circleFilled.png", "PNG")
 
-    sqrTriangle1F = Image.new("RGB", (40, 40), (255, 255, 255))
+    sqrTriangle1F = Image.new("RGBA", (40, 40), (255, 255, 255, 255))
     draw = ImageDraw.Draw(sqrTriangle1F)
-    draw.polygon((5, 5, 35, 35, 5, 35), outline=(0, 0, 0), fill="black")  # triangle
+    draw.polygon((5, 5, 35, 35, 5, 35), outline=(0, 0, 0, 255), fill=(0, 0, 0, 255))
     sqrTriangle1F.save("generatedPics/sqrTriangleFilled.png", "PNG")
 
-    triangleF = Image.new("RGB", (40, 40), (255, 255, 255))
+    triangleF = Image.new("RGBA", (40, 40), (255, 255, 255, 255))
     draw = ImageDraw.Draw(triangleF)
-    draw.polygon((30, 30, 10, 30, 20, 10), outline=(0, 0, 0), fill="black")  # triangle
+    draw.polygon((30, 30, 10, 30, 20, 10), outline=(0, 0, 0, 255), fill=(0, 0, 0, 255))
     triangleF.save("generatedPics/triangleFilled.png", "PNG")
 
-    square = Image.new("RGB", (40, 40), (255, 255, 255))
+    square = Image.new("RGBA", (40, 40), (255, 255, 255, 255))
     draw = ImageDraw.Draw(square)
-    draw.rectangle((10, 10, 30, 30), fill=(255, 255, 255), outline=(0, 0, 0))  # square
-    draw.polygon((30, 30, 10, 30, 20, 10), outline=(0, 0, 0), fill="black")  # triangle
+    draw.rectangle((10, 10, 30, 30), fill=(255, 255, 255, 255), outline=(0, 0, 0, 255))  # square
+    draw.polygon((30, 30, 10, 30, 20, 10), outline=(0, 0, 0, 255), fill=(0, 0, 0, 255))  # triangle
     square.save("generatedPics/squareTriangle.png", "PNG")
 
     print "111";
