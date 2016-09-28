@@ -45,7 +45,7 @@ def createDataSet(dir):
         arr = createExample(dir+item)
         for element in arr :
             if element[0] < 255 and element[1] < 255 and element[2] < 255 and element[3] == 255:
-                clearArr.append(1)
+                clearArr.append(1) #???????????
             else:
                 clearArr.append(0)
         #inputArr.append(clearArr)
